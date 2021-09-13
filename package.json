@@ -11,6 +11,9 @@
 	"files": [
 		"dist"
 	],
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"start": "webpack serve --open --config ./webpack.config.js --mode development --hot",
 		"build": "webpack --config ./webpack.config.js --mode production",
