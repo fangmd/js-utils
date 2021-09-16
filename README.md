@@ -9,3 +9,8 @@
 
 - [x] maxLength: 字符串长度限制
 
+## Arr
+
+数组相关工具
+
+- [x] removeArrIndex: 数组的某个元素
