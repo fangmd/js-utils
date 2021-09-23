@@ -42,6 +42,7 @@ export const lengthValidate = (content: string, min: number, max: number): boole
 
 /**
  * 去除富文本内容，并且保留换行格式 div, p, br 换行
+ * 目前处理的标签: div, p, br, span, strong
  * @param content 富文本
  * @returns 处理后的文本
  */
