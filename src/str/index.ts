@@ -13,3 +13,8 @@ export const maxLength = (value: string, maxLength: number = Infinity) => {
   }
   return ret
 }
+
+
+// export const limitLength = (content:string)=>{
+//   return content.match(new RegExp('^[\\s\\S]{10,5000}$'))
+// }

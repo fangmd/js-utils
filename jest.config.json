@@ -1,0 +1,6 @@
+{
+  "testPathIgnorePatterns": [
+    "src",
+    "dist"
+  ]
+}

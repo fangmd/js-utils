@@ -21,7 +21,7 @@
 		"postbuild": "tsc",
 		"dev": "ts-node",
 		"testVerbose": "export NODE_ENV=uniTest && jest --runInBand --forceExit --colors --detectOpenHandles --coverage --verbose",
-		"test": "jest --runInBand --forceExit --colors --detectOpenHandles --silent",
+		"test": "jest --config=jest.config.json",
 		"testLog": "export NODE_ENV=uniTest && jest --runInBand --forceExit --colors --detectOpenHandles"
 	},
 	"devDependencies": {
