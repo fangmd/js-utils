@@ -40,10 +40,15 @@ export const lengthValidate = (content: string, min: number, max: number): boole
   return new RegExp(`(.){${min},${max}}`).test(content)
 }
 
+/**
+ * 去除富文本内容，并且保留换行格式 div, p, br 换行
+ * @param content 富文本
+ * @returns 处理后的文本
+ */
 export const removeRichTextReserveWrap = (content: string): string => {
-  // content = content.replace(/\<\/p>/g, '\n')
-  // content = content.replace(/\<\/div>/g, '\n')
-
-  content = content.replace(/<\/?[^>]*>/g, '')
+  if (!content) return content
+  content = content.replace(/\<\/p>|\<\/div>|<br>/g, '\n') // 处理 </p>,</div>,<br>
+  content = content.replace(/\<\/span>|\<\/br>|\<\/strong>/g, '') // 处理 </span>, </br>, </strong>
+  content = content.replace(/<p\/?[^>]*>|<span\/?[^>]*>|<div\/?[^>]*>|<strong\/?[^>]*>/g, '') // 处理 <p...>, <span...>, <div...>, <strong...>
   return content
 }

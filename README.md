@@ -17,3 +17,5 @@
 
 ## Regex
 
+
+- [x] removeRichTextReserveWrap: 去除富文本内容，并且保留换行格式 div, p, br 换行
