@@ -35,7 +35,15 @@ export const isDesensitizationPhone = (phone: string): boolean => {
  * @returns true：表示长度在范围内，false 表示长度超出范围
  */
 export const lengthValidate = (content: string, min: number, max: number): boolean => {
-  console.log(new RegExp(`(.){${min},${max}}`).test(content));
-  
+  console.log(new RegExp(`(.){${min},${max}}`).test(content))
+
   return new RegExp(`(.){${min},${max}}`).test(content)
+}
+
+export const removeRichTextReserveWrap = (content: string): string => {
+  // content = content.replace(/\<\/p>/g, '\n')
+  // content = content.replace(/\<\/div>/g, '\n')
+
+  content = content.replace(/<\/?[^>]*>/g, '')
+  return content
 }
