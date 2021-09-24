@@ -51,5 +51,6 @@ export const removeRichTextReserveWrap = (content: string): string => {
   content = content.replace(/\<\/p>|\<\/div>|<br>/g, '\n') // 处理 </p>,</div>,<br>
   content = content.replace(/\<\/span>|\<\/br>|\<\/strong>/g, '') // 处理 </span>, </br>, </strong>
   content = content.replace(/<p\/?[^>]*>|<span\/?[^>]*>|<div\/?[^>]*>|<strong\/?[^>]*>/g, '') // 处理 <p...>, <span...>, <div...>, <strong...>
+  // content = content.replace(/<[^>]+>/g, '') // 处理所有标签 <xxx>, </xxx>
   return content
 }
