@@ -35,9 +35,7 @@ export const isDesensitizationPhone = (phone: string): boolean => {
  * @returns true：表示长度在范围内，false 表示长度超出范围
  */
 export const lengthValidate = (content: string, min: number, max: number): boolean => {
-  console.log(new RegExp(`(.){${min},${max}}`).test(content))
-
-  return new RegExp(`(.){${min},${max}}`).test(content)
+  return new RegExp(`^(.){${min},${max}}$`).test(content)
 }
 
 /**
